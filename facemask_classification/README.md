@@ -3,7 +3,7 @@
 #### Face-Mask classification
 
 Predict whether a person in an image is wearing a mask.
-The Challenge can be found on [Zindi](https://zindi.africa/hackathons/Spot-the-mask/) for more info.
+The Challenge can be found on [Zindi](https://zindi.africa/hackathons/spot-the-mask-challenge/) for more info.
 
 Solution summary:
 
@@ -12,10 +12,10 @@ Solution summary:
 
 > * The 2nd approach was transfer learning using the MobileNet-V2 model for feature extraction with an added top layer for classification.
 
-> * Approach 2 gave a better score but both have alot of improvement required.
+> * Approach 2 gave a better score but both have alot of improvement required but i had no time to do it.
 
 
 * Library: TensorFlow.v.2.0
 * evaluation metrics logloss.
 
-**Score:** 0.28 **Rank:** 88/146
+**Private_LB Score:** 0.2858 **Rank:** 83/146
