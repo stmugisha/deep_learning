@@ -1,6 +1,6 @@
 # deep_learning
 <p>
-    This repository is majorly a series of deep learning notebooks assembled from the bits to the bytes and some fun project implementations.
+    Everything deep-learning
 </p>
 
 ## Setting up Jupyter-notebook beyond the basic-setup:
