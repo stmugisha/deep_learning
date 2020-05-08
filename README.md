@@ -4,6 +4,10 @@ Deep learning is a class of machine learning algorithms that uses multiple layer
 
 ![image.png](./assets/dl.png)
 
+Deep-learning libraries:
+
+* [TensorFlow](https:www.tensorflow.org/)
+* [Pytorch](www.pytorch.org/)
 
 Development environments:
 
