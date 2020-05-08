@@ -5,7 +5,8 @@ Deep learning is a class of machine learning algorithms that uses multiple layer
 ![image.png](./assets/dl.png)
 
 
-> Development environments:
-	* [Google colab](https://colab.research.google.com/)
-	* Jupyter-notebooks
-	* [Kaggle kernels](https://www.kaggle.com/)
+Development environments:
+
+* [Google colab](https://colab.research.google.com/)
+* Jupyter-notebooks
+* [Kaggle kernels](https://www.kaggle.com/)
