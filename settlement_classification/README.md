@@ -1,5 +1,6 @@
 # SANSA AWS Informal Settlements in South Africa
-### Overview
+
+### Overview:
 
 Classifying Informal and formal settlements in South Africa using satellite imagery.
 
