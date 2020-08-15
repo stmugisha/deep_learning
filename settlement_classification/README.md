@@ -2,8 +2,7 @@
 
 ### Overview:
 
-Classifying Informal and formal settlements in South Africa using satellite imagery.
-
+Classifying Informal and formal settlements in South Africa using satellite imagery.<br/>
 The data is hosted in a private AWS S3 bucket by the South African National Space Agency (SANSA) so its not available for public usage.
 More about the challenge can be found [here](https://zindi.africa/hackathons/sansa-informal-settlements-in-south-africa)
 
