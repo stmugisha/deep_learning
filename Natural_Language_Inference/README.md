@@ -1,6 +1,6 @@
 # Natural Language Inference (NLI):
 
-## Introduction:
+## Overview:
 
 Natural Language Inference is a task of determining whether a `hypothesis` is true `(entailment)`, False `(contradiction)`, or undertermined `(neutral)` given a `premise`.
 
