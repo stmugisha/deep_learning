@@ -14,6 +14,6 @@ Natural Language Inference is a task of determining whether a `hypothesis` is tr
 
 <br/><br/>
 
-**In summary, NLI determines whether a given text (hypothesis) implies something similar to what is implied in the reference text (premise)**
+**In summary, `NLI` determines whether a given text `(hypothesis)` implies something similar to what is implied in the reference text `(premise)`**
 
 
