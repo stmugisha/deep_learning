@@ -1,3 +1,5 @@
+# Adopted from: https://github.com/rtlee9/recipe-scraper/tree/4f3d38c1b99acff43410f9d72118f4a4fc87eefa/recipe_scrapers/
+
 from abstract_scraper import AbstractScraper
 from utils import get_minutes, normalize_string
 
