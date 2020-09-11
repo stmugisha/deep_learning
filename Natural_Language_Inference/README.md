@@ -14,4 +14,5 @@ Natural Language Inference is a task of determining whether a `hypothesis` is tr
 
 In summary, **`NLI` determines whether a given text `(hypothesis)` implies something similar to what is implied in the reference text `(premise)`**
 
-The `Roberta_model.py` file contains a Roberta Language Model trained for NLI.
+The `Roberta_model.py` file contains a Roberta Language Model trained for NLI.<br/>
+The related Kaggle Kernel can be accessed [HERE](https://www.kaggle.com/stephenmugisha/roberta-vs-watson)
