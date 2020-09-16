@@ -1,3 +1,3 @@
 ## Github data Scraper
 
-A github data scraper using `Puppeteer` and `Node.js`
+A github data scraper built with `Puppeteer` and `Node.js`
