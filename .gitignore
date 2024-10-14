@@ -1,3 +1,5 @@
 *.ipynb_checkpoints
-*/__pycache__/
-*/submissions
+__pycache__/
+
+# python environments
+env/
