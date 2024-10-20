@@ -6,14 +6,21 @@
 #
 # The activation functions are applied to the perceptron as decorators
 # to allow for quick experimentation with different activations.
-from typing import List
-from activations import sigmoid
+from typing import List, Any
+from activations import sigmoid, relu
 
 
-def perceptron(input: List[List[float]], weights: List[float], bias: float):
+def perceptron(input: List[List[Any]], weights: List[float], bias: float):
 	"""Perceptron function implementation.
 
 	A perceptron is defined as f(x) = activation_func(sum_i_j(x_i * w_i) + b)
+	Args:
+		input: a list of input features
+		weights: a list of weights. Must be of same length as input_i
+		bias: bias term
+	
+	Returns:
+		A list of (features_i_j * weights_i + bias) values
 	"""
 	out = []
 	for feature in input:
@@ -25,10 +32,8 @@ def perceptron(input: List[List[float]], weights: List[float], bias: float):
 
 
 if __name__=="__main__":
-	features = [[0.5, 1.0], [-1.5, -2.0], [2.0, 1.5]]
-	weights = [0.7, -0.4]
-	bias = -0.1
-	res = sigmoid(perceptron(features, weights, bias))
+	or_circuit = [[1, 1], [0, 1], [1, 0], [0, 0]]
+	weights = [0.5, 0.5]
+	bias = 1.0
+	res = sigmoid(perceptron(or_circuit, weights, bias))
 	print(f"Output probabilities: {res}")
-  # Output == [0.46257015465625034, 0.41338242108267, 0.668187772168166]
-	
