@@ -1,4 +1,4 @@
-# The perceptron
+# The perceptron: mathematical approximation of a biological neuron 
 # The perceptron is an algorithm for learning a binary classifier. 
 # A binary classifier is a function that maps its input to binary output.
 # It is defined as, f(x) = activation_function(sum_i_j(x_i * w_i) + b), 
@@ -7,7 +7,9 @@
 # The activation functions are applied to the perceptron as decorators
 # to allow for quick experimentation with different activations.
 from typing import List, Any
-from activations import sigmoid, relu
+import numpy as np
+from activations import sigmoid
+
 
 
 def perceptron(input: List[List[Any]], weights: List[float], bias: float):
@@ -28,7 +30,8 @@ def perceptron(input: List[List[Any]], weights: List[float], bias: float):
 			sum((x * weight) for x, weight in zip(feature, weights)) + bias
 		)
 
-	return out
+	return np.array(out)
+
 
 
 if __name__=="__main__":

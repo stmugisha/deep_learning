@@ -1,47 +1,62 @@
 # Implementations of various activation functions.
-from typing import List, Union
+from typing import Union
 from functools import wraps
 import math
+import numpy as np
 
 
-def sigmoid(x: Union[float, List[float]]):
+
+def sigmoid(x: Union[float, np.ndarray]):
 	"""The sigmoid activation function.
 
-	It is a function whose graph follows a logistic function.
+	It is a monotonic function (entirely non-decreasing or non-increasing) 
+	whose graph follows a logistic function.
 	It's defined as, delta(x) = 1 / (1 + e^(-x)), where x is the input value
+
 	Function domain: [0, 1]
+
 	Args:
 		x: a float or a list of float values.
+
+	Returns:
+		List or float of sigmoid transformed values 
 	"""
-	if isinstance(x, list):
-		return [1 / (1 + math.exp(-i)) for i in x]
+	if isinstance(x, np.ndarray):
+		return 1 / (1 + np.exp(-x))
 	elif isinstance(x, float):
 		return 1 / (1 + math.exp(-x))
 	else:
-		raise ValueError("Input must be a float or a list of float values.")
+		raise ValueError("Sigmoid input must be a float or a 1D array of float values.")
 
 
-def relu(x):
+def relu(x: Union[float, np.ndarray]):
 	"""Relu activation function.
 	
+	Defined as, f(x) = 
 	"""
-	raise NotImplementedError
+	if isinstance(x, np.ndarray):
+		return np.maximum(x, 0)
+	elif isinstance(x, float):
+		return max(x, 0)
+	else:
+		raise ValueError("ReLU input must be a float or a 1D array of float values")
 
 
-def tanh(x: List[float]):
+def tanh(x: np.ndarray):
 	"""Hyperbolic tangent activation function.
 
-	It is defined as, delta(x) = 
+	It is defined as, tanh(x) = sinh(x)/cosh(x) = (e^x - e^-x) / (e^x + e^-x)
+	= (e^2x - 1) / (e^2x + 1)
 	"""
-	raise NotImplementedError
+	return (np.exp(x) - np.exp(-x)) / (np.exp(x) + np.exp(-x))
 
 
-def softmax(x: List[float]):
+def softmax(x: np.ndarray):
 	"""Softmax activation function.
 	
 	It is defined as f(x) = e^z_i / sum_i_j(e^x_i)
 	"""
-	raise NotImplementedError
+	return np.exp(x) / np.sum(np.exp(x))
 
 
 def activation(function: str = "sigmoid"):
