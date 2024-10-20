@@ -6,8 +6,8 @@ import numpy as np
 
 
 def mean_squared_error(
-	true_values: List[Union[float, int]], 
-	predicted_values: List[Union[float, int]]
+	true_values: Union[List[float], np.ndarray], 
+	predicted_values: Union[List[float], np.ndarray]
 	):
 	"""Mean squared error loss function.
 
