@@ -6,7 +6,7 @@ import numpy as np
 
 
 
-def sigmoid(x: Union[float, np.ndarray]):
+def sigmoid(x: np.ndarray):
 	"""The sigmoid activation function.
 
 	It is a monotonic function (entirely non-decreasing or non-increasing) 
@@ -29,7 +29,13 @@ def sigmoid(x: Union[float, np.ndarray]):
 		raise ValueError("Sigmoid input must be a float or a 1D array of float values.")
 
 
-def relu(x: Union[float, np.ndarray]):
+def sigmoid_delta(x: np.ndarray):
+	"""Sigmoid derivative.
+	"""
+	return sigmoid(x) * (1 - sigmoid(x))
+
+
+def relu(x: np.ndarray):
 	"""Relu activation function.
 	
 	Defined as, f(x) = 
@@ -40,6 +46,16 @@ def relu(x: Union[float, np.ndarray]):
 		return max(x, 0)
 	else:
 		raise ValueError("ReLU input must be a float or a 1D array of float values")
+
+
+def relu_delta(x: float):
+	"""ReLU Derivative.
+
+	For x < 0, f'(x) = 0 and f'(x) = 1 otherwise.
+	relu isn't differentiable at x=0 but for practical reasons,
+	f'(x=0) = 0.
+	"""
+	return np.where(x > 0, 1, 0)
 
 
 def tanh(x: np.ndarray):

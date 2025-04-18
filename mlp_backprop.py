@@ -1,22 +1,20 @@
 """
-Multi Layer Perceptron (FeedForward Neural Network).
-It is a network of multiple fully connected neurons/perceptrons.
+Backpropagation implementation.
+A neural network learns by means of updates to its weights for each data processed by  
+inorder to minimize a given objective function.
+The mechanism of updating network weights is what is termed as backpropagation.
 """
-from typing import List, Any
 import numpy as np
 from activations import relu, sigmoid
-
-
-def perceptron_np(inputs: np.ndarray, weights: np.ndarray, bias: np.ndarray):
-	"""Perceptron in numpy (Logically the same as that in perceptron.py)."""
-	return np.dot(inputs, weights) + bias
+from mlp import perceptron_np
+from losses import mse, mse_delta
 
 
 class MLP:
 	"""Multi Layer Perceptron."""
 	def __init__(
 		self, 
-		input_dim: int,  
+		input_dim: int,
 		hidden_dim: int,
 		out_dim: int, 
 	) -> None:
@@ -36,13 +34,3 @@ class MLP:
 
 	def __call__(self, x):
 		return self.forward(x)
-
-
-
-
-if __name__=="__main__":
-	or_circuit = np.array([[1, 1], [0, 1], [1, 0], [0, 0]])
-	in_dim = or_circuit.shape[1]
-	model = MLP(in_dim, 10, 1) # hidden dim can be different from input dim
-	out = model(or_circuit)
-	print(f"Output probabilities: \n{out}")
